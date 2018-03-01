@@ -5,7 +5,7 @@
 # How to deploy this?
 
 ## Deploy video
-[![Watch the video](https://cdn1.iconfinder.com/data/icons/logotypes/32/youtube-256.png)](http://youtu.be/vt5fpE0bzSY)
+[![Watch the video](https://lh3.googleusercontent.com/qGsGLLq3tx0ny752dsDOCZXniHri2D49cTzMCYJaH2ABAWV8EP70izxz6R1UjPA9S7yLOzYi_b_aZw=w1366-h647)](https://youtu.be/F8C1dot2t9o)
 
 ## Deploy on Heroku
 
