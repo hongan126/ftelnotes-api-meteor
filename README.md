@@ -28,13 +28,13 @@ Encode and Decode Url [Here](https://www.url-encode-decode.com/) (Exam: '@' enco
 Meteor Buildpack Horse: 
 `https://github.com/AdmitHub/meteor-buildpack-horse.git`
 
-### Some error
+### Some errors
 
-- To fix error: `at=error code=H14 desc="No web processes running" method=GET path="/sockjs/info?cb=2uma05ykoi`
+- To fix error `at=error code=H14 desc="No web processes running" method=GET path="/sockjs/info?cb=2uma05ykoi`
 
 Use command: `heroku ps:scale web=1 -a <app-name>`
 
-- To fix error `No 'Access-Control-Allow-Origin' header is present on the requested resource`
+- Fix error `No 'Access-Control-Allow-Origin' header is present on the requested resource`
 ![Fix erroer](https://lh6.googleusercontent.com/61wGCXNWCUVL344WZD0W8JrKHsAaZCv67F6wxYvCJr74L3OXnvZDNJJv5SAlBF6vZw1W5uOKiD87Jg=w1366-h647)
 
 - To fix `Error: Invalid login` for Gmail account: [Click here](https://productforums.google.com/forum/#!topic/gmail/9KCgzXY4G_c)
