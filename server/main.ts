@@ -5,7 +5,7 @@ Meteor.startup(() => {
 
   WebApp.rawConnectHandlers.use(function (req, res, next) {
     if (req._parsedUrl.pathname.match(/(sockjs)/)) {
-      res.setHeader('Access-Control-Allow-Origin', '*');
+      res.setHeader('Access-Control-Allow-Origin', 'https://ftel-notes.herokuapp.com/');
     }
     next();
   });
