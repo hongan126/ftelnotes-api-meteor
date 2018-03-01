@@ -4,7 +4,7 @@
 
 # How to deploy this?
 
-## Deploy video
+## Tutorial video for deployment
 [![Watch the video](https://lh3.googleusercontent.com/qGsGLLq3tx0ny752dsDOCZXniHri2D49cTzMCYJaH2ABAWV8EP70izxz6R1UjPA9S7yLOzYi_b_aZw=w1366-h647)](https://youtu.be/F8C1dot2t9o)
 
 ## Deploy on Heroku
