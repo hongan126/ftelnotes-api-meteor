@@ -17,6 +17,8 @@ Full tutorial: [Here](https://medium.com/@pushplaybang/deploying-and-hosting-met
 
 Example for gmail: `EMAIL_URL=smtps://abcd%40gmail.com:password@smtp.gmail.com:465/`
 
+Encode and Decode Url [Here](https://www.url-encode-decode.com/) (Exam: '@' encode -> '%40')
+
 `heroku config:set MONGO_URL=mongodb://your-db-user-name:your-db-password@ds017231.mlab.com:17231/db-name`
 
 `heroku config:set ROOT_URL=your-heroku-url`
