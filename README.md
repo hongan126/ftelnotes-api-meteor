@@ -35,7 +35,7 @@ Meteor Buildpack Horse:
 Use command: `heroku ps:scale web=1 -a <app-name>`
 
 - Fix error `No 'Access-Control-Allow-Origin' header is present on the requested resource`
-![Fix erroer](https://lh6.googleusercontent.com/61wGCXNWCUVL344WZD0W8JrKHsAaZCv67F6wxYvCJr74L3OXnvZDNJJv5SAlBF6vZw1W5uOKiD87Jg=w1366-h647)
+![Fix erroer](https://image.ibb.co/c9LX57/Fix_No_Access_Control_Allow_Origin.png)
 
 - To fix `Error: Invalid login` for Gmail account: [Click here](https://productforums.google.com/forum/#!topic/gmail/9KCgzXY4G_c)
 
