@@ -49,6 +49,13 @@ Meteor.methods({
 
     NoteGroups.insert(newGroup);
   },
+  editGroup(groupName: string, groupId: string): void {
+    isLoggingIn();
+    check(groupName, nonEmptyString);
+    isGroupExisted(groupName);
+
+    NoteGroups.update({_id: groupId}, {$set: {name: groupName}});
+  },
   removeGroup(notesGroupId: string): void {
     isLoggingIn();
     const group = NoteGroups.findOne({_id: notesGroupId});
@@ -58,6 +65,28 @@ Meteor.methods({
     isOwned(group.ownerId, 'Group: "' + group.name + '"');
     Notes.remove({groupId: notesGroupId});
     NoteGroups.remove({_id: notesGroupId});
+  },
+  setGroupCreatedDate(groupId: string, moveTop: boolean): void {
+    isLoggingIn();
+    if (moveTop) {
+      NoteGroups.update(
+        {_id: groupId},
+        {$set: {createdAt: new Date()}}
+      );
+    } else {
+      const group = NoteGroups.findOne({
+        $or: [
+          {ownerId: Meteor.userId()},
+          {memberIds: Meteor.userId()}
+        ]
+      }, {sort: {createdAt: 1}});
+      const oldDate: Date = <Date>(group.createdAt);
+      oldDate.setDate((<Date>(group.createdAt)).getDate() - 1);
+      NoteGroups.update(
+        {_id: groupId},
+        {$set: {createdAt: oldDate}}
+      );
+    }
   },
   removeNote(noteId: string): void {
     isLoggingIn();
@@ -97,16 +126,16 @@ Meteor.methods({
     if (note.type === NoteType.TEXT) {
       Notes.update(
         {_id: note._id},
-        {$set: {title: note.title, content: note.content}}
+        {$set: {title: note.title, content: note.content, createdAt: note.createdAt}}
       );
     } else {
       Notes.update(
         {_id: note._id},
-        {$set: {title: note.title, todoList: note.todoList}}
+        {$set: {title: note.title, todoList: note.todoList, createdAt: note.createdAt}}
       );
     }
   },
-  setCreatedDate(groupId: string, noteId: string, moveTop: boolean): void {
+  setNoteCreatedDate(groupId: string, noteId: string, moveTop: boolean): void {
     isLoggingIn();
     if (moveTop) {
       Notes.update(
